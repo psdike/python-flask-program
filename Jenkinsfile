@@ -5,8 +5,8 @@ pipeline {
         stage('Clone') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/psdike/python-flask-program.git'
-
+                sh "git clone https://github.com/psdike/python-flask-program.git"
+                sh "cd python-flask-program" 
                 sh "ls"
             }
             }

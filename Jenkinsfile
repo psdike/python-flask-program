@@ -18,14 +18,14 @@ pipeline {
                 sh "sudo apt install python3-pip -y"
                 sh "pwd"
               sh "ls -a"
-                sh "pip3 install -r requirements.txt"
+                sh "sudo pip3 install -r requirements.txt"
                 
             }
         }
          stage('Deploy')  {
           steps {
                 
-                sh "nohup python3 main.py &"
+                sh "nohup sudo python3 main.py &"
                 
             }
         }
